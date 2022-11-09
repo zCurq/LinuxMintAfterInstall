@@ -30,6 +30,7 @@ curl -# https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.de
 curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get update && sudo apt-get install spotify-client
+sudo apt install plank cmake g++ -y
 
 # Temalar Kuruluyor
 echo -e "${yesil}########## Temalar Kuruluyor ##########${temizle}"
@@ -43,7 +44,7 @@ bash install.sh && cd .. && rm -rf Colloid-icon-theme
 echo -e "${yesil}########## Gereksiz Artıklar Kaldırılıyor ##########${temizle}"
 sudo apt autoremove -y
 
-echo -e "${kirmizi}Sistem yeniden başlatılsın mı ?${temizle} ${turkuaz}( evet / hayır )${temizle} \n>"
+echo -e "${kirmizi}Sistem yeniden başlatılsın mı ?${temizle} ${turkuaz}( evet / hayır )${temizle} \n=>"
 read cevap
 
 if [[ $cevap == "evet" ]] ; then
