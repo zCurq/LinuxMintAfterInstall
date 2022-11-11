@@ -29,8 +29,10 @@ wget "discord.com/api/download?platform=linux" -O discord.deb && apt install ./d
 curl -# https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb --output googlechrome.deb && apt install ./googlechrome.deb -y && rm googlechrome.deb #Google Chrome
 curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt-get update && sudo apt-get install spotify-client
+sudo apt-get update -y && sudo apt-get install spotify-client -y 
 sudo apt install plank cmake g++ -y
+sudo apt install steam -y
+sudo apt install wine-installer -y
 
 # Temalar Kuruluyor
 echo -e "${yesil}########## Temalar Kuruluyor ##########${temizle}"
