@@ -47,11 +47,24 @@ bash install.sh && cd .. && rm -rf Colloid-icon-theme
 echo -e "${yesil}########## Gereksiz Artıklar Kaldırılıyor ##########${temizle}"
 sudo apt autoremove -y
 
-echo -e "${kirmizi}Sistem yeniden başlatılsın mı ?${temizle} ${turkuaz}( evet / hayır )${temizle} \n=>"
-read cevap
+echo -e "${yesil}########## Önyükleyici Kurulsun mu ? ##########${temizle} ${turkuaz}( evet / hayır )${temizle}"
+echo -e "${mavi} Önyükleyici(rEFInd) Linux Mint -i Windows yada alternatif işletim sistemleri ile birlikte kullanmak için gerekli olan bir pakettir.${temizle}"
+read cevap2
 
-if [[ $cevap == "evet" ]] ; then
+echo -e "${kirmizi}Sistem yeniden başlatılsın mı ?${temizle} ${turkuaz}( evet / hayır )${temizle} \n=>"
+read cevap1
+
+if [[ $cevap1 == "evet" ]] ; then
     reboot
 else
     echo -e "${turkuaz}Tüm işlemler başarı ile sonlandı !${temizle}"
 fi
+
+
+if [[ $cevap2 == "evet" ]] ; then
+    sudo apt install refind -y
+    sudo refind-installer
+else
+    echo "Atlandı!"
+fi
+    
