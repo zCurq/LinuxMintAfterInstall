@@ -33,6 +33,7 @@ sudo apt-get update -y && sudo apt-get install spotify-client -y
 sudo apt install plank cmake g++ -y
 sudo apt install steam -y
 sudo apt install wine-installer -y
+sudo apt install tlp -y
 
 # Temalar Kuruluyor
 echo -e "${yesil}########## Temalar Kuruluyor ##########${temizle}"
